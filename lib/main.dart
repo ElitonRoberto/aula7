@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:requisicao/src/postagem.dart';
+import 'src/login.dart';
+import 'src/formulario.dart';
+import 'principal.dart';
 
+void main() => runApp(Main());
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  return MaterialApp(
+class Main extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       routes: {
-        '/home':(context) => MeuPage(),
-        '/tabbar':(context) => Tabbar(),
-        '/snackbar':(context) => Mensagem(),
+        '/principal':(context) => TelaPrincipal(),
+        '/login': (context) => Login(),
+        '/postagem':(context) => NovaPostagem(),
+        '/formulario': (context) => Formulario()
       },
-      initialRoute: '/home',   
-  
+      initialRoute: '/principal',
+    );
+  }
 }
-
