@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:requisicao/src/postagem.dart';
 import 'src/login.dart';
 import 'src/formulario.dart';
@@ -11,10 +12,10 @@ class Main extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        '/principal':(context) => TelaPrincipal(),
+        //'/principal':(context) => TelaPrincipal(),
         '/login': (context) => Login(),
-        '/postagem':(context) => NovaPostagem(),
-        '/formulario': (context) => Formulario()
+        //'/postagem':(context) => NovaPostagem(),
+        //'/formulario': (context) => Formulario()
       },
       initialRoute: '/principal',
     );
